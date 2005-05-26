@@ -41,3 +41,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/bsdmake
 %dir %{_datadir}/mk
 %{_datadir}/mk/*.mk
+%{_mandir}/man1/*
