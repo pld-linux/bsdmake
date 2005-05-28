@@ -16,10 +16,11 @@ BSD make program.
 %setup -q 
 
 %build
-%{__cc} -DDEFSHELL=1 -Dlint -I. -c *.c
-cd lst.lib; %{__cc} -I.. -Dlint -c *.c
+%{__cc} %{rpmcflags} -DDEFSHELL=1 -Dlint -I. -c *.c
+cd lst.lib
+%{__cc} %{rpmcflags} -I.. -Dlint -c *.c
 cd ..
-%{__cc} *.o lst.lib/*.o -o bsdmake
+%{__cc} %{rpmcflags} *.o lst.lib/*.o -o bsdmake
 
 %install
 rm -rf $RPM_BUILD_ROOT
