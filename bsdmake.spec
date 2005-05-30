@@ -1,4 +1,5 @@
-Summary:	BSD make program.
+Summary:	BSD make program
+Summary(pl):	Program BSD make
 Name:		bsdmake
 Version:	11
 Release:	0.1
@@ -12,6 +13,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 BSD make program.
 
+%description -l pl
+Program BSD make.
+
 %prep
 %setup -q 
 
@@ -20,11 +24,10 @@ BSD make program.
 cd lst.lib
 %{__cc} %{rpmcflags} -I.. -Dlint -c *.c
 cd ..
-%{__cc} %{rpmcflags} *.o lst.lib/*.o -o bsdmake
+%{__cc} %{rpmldflags} *.o lst.lib/*.o -o bsdmake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_datadir}/mk
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
