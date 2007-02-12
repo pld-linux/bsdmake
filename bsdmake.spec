@@ -1,5 +1,5 @@
 Summary:	BSD make program
-Summary(pl):	Program BSD make
+Summary(pl.UTF-8):   Program BSD make
 Name:		bsdmake
 Version:	11
 Release:	0.1
@@ -13,7 +13,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 BSD make program.
 
-%description -l pl
+%description -l pl.UTF-8
 Program BSD make.
 
 %prep
