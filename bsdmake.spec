@@ -1,5 +1,5 @@
 Summary:	BSD make program
-Summary(pl.UTF-8):   Program BSD make
+Summary(pl.UTF-8):	Program BSD make
 Name:		bsdmake
 Version:	11
 Release:	0.1
